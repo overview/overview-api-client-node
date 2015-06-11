@@ -140,6 +140,19 @@ API.prototype.get = function(requester) {
   }
 };
 
+/**
+ * Send a request to update a given object in the store.
+ * @param {Object} state The state for the new object.
+ * @param {Object} requester (Optional) A requester to use instead of this.requester.
+ * @return {Object} The return value of calling the requester to make the request.
+ */
+API.prototype.update = function(state, requester) {
+  if(!this.storeObjectId) {
+    throw new Error("You must specify a store object id before calling this method.");
+  }
+
+  return this._request('/store/objects/' + this.storeObjectId, requester, 'PUT', state);
+}
 
 /**
  * Get the store's state.
@@ -190,20 +203,6 @@ API.prototype.getObjects = function(requester) {
  */
 API.prototype.createObject = function(state, requester) {
   return this._request('/store/objects', requester, 'POST', state);
-}
-
-/**
- * Send a request to update a given object in the store.
- * @param {Object} state The state for the new object.
- * @param {Object} requester (Optional) A requester to use instead of this.requester.
- * @return {Object} The return value of calling the requester to make the request.
- */
-API.prototype.updateStoreObject = function(state, requester) {
-  if(!this.storeObjectId) {
-    throw new Error("You must specify a store object id before calling this method.");
-  }
-
-  return this._request('/store/objects/' + this.storeObjectId, requester, 'PUT', state);
 }
 
 
