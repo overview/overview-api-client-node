@@ -1,0 +1,25 @@
+{
+  "name": "overview-api-node",
+  "version": "1.0.0",
+  "description": "A javascript (node) class for interacting with the Overview API",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overview/overview-api-client-node.git"
+  },
+  "keywords": [
+    "overview",
+    "api"
+  ],
+  "author": "Ethan Resnick <hi@ethanresnick.com>",
+  "license": "AGPL-3",
+  "bugs": {
+    "url": "https://github.com/overview/overview-api-client-node/issues"
+  },
+  "homepage": "https://github.com/overview/overview-api-client-node",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
