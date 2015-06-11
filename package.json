@@ -1,6 +1,6 @@
 {
   "name": "overview-api-node",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A javascript (node) class for interacting with the Overview API",
   "scripts": {
     "test": "./node_modules/mocha/bin/_mocha test/index.js"
